@@ -156,7 +156,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
 ## Advanced: how to train a model using data of my own? (only for Linux-based systems)
 
-1.  follow the Steps 1--9 in Quick start section. Note that if you want to train a custom model, you must 
+1.  follow the Steps 1--9 in Quick start section. Note that if you want to train a custom model, you <b><i>must</i></b> 
     download and compile ANTs toolkit, Step 7 in Quick start section is no longer optional.
 
 2.  download and install [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/). Note that you may also need to 
@@ -192,3 +192,17 @@ To use our pre-trained model for inference, please carefully follow the steps li
     experiments/010_OASIS3/run_Siemens_Biograph_mMR.py
     experiments/010_OASIS3/run_Siemens_TrioTim.py
     ```
+    
+    you can also run these two examples:
+    
+    ```bash
+    cd .../experiments/010_OASIS3/
+    python run_Siemens_Biograph_mMR.py
+    ```
+    ```bash
+    cd .../experiments/010_OASIS3/
+    python run_Siemens_TrioTim.py
+    ```
+    
+    
+    
