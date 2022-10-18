@@ -214,7 +214,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
        errors are also given. You can follow the tips to fix those problems and repeat Step 4 to verify your
        install until no error occurs (as shown below).
         
-       ![1](https://user-images.githubusercontent.com/18594210/196347681-703c9679-9193-4494-86eb-2d60f3eb82b1.png)
+       ![1](https://user-images.githubusercontent.com/18594210/196351063-732bfe8e-14d6-4fbc-8311-1e5ebbeeca04.png)
 
 
 5.  here we provided two examples of using a public dataset ([OASIS-3](https://www.oasis-brains.org/)) 
