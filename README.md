@@ -80,7 +80,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 6.  download and unzip ROBEX from "https://www.nitrc.org/projects/robex", then add:
 
     ```bash
-    export ROBEX_DIR="/path/to/your/ROBEX/dir/
+    export ROBEX_DIR="/path/to/your/ROBEX/dir/"
     ```
     
     in your ~/.bashrc, make sure "runROBEX.sh" is in this directory, then 
@@ -156,13 +156,15 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
 ## Advanced: how to train a model using data of my own? (only for Linux-based systems)
 
-1.  follow the Steps 1--9 in Quick start section. Note that if you want to train a custom model, you <b><i>must</i></b> 
-    download and compile ANTs toolkit, Step 7 in Quick start section is no longer optional.
+1.  follow the Steps 1--9 in [Quick start](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems) section. Note that if you want to train a custom model, you <b><i>must</i></b> 
+    download and compile ANTs toolkit, Step 7 in [Quick start](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems) section is no longer optional.
 
 2.  download and install [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/). Note that you may also need to 
     install "csh" and "tcsh" shell by running 
     
     ```sudo apt-get install csh tcsh```
+    
+    after the installation.
 
 3.  download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki).
 
