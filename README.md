@@ -160,9 +160,11 @@ To use our pre-trained model for inference, please carefully follow the steps li
     download and compile ANTs toolkit, Step 7 in Quick start section is no longer optional.
 
 2.  download and install [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/). Note that you may also need to 
-    install "csh" and "tcsh" shell by executing "sudo apt-get install csh tcsh" command.
+    install "csh" and "tcsh" shell by running 
+    
+    ```sudo apt-get install csh tcsh```
 
-3.  download and install [FSL]("https://fsl.fmrib.ox.ac.uk/fsl/fslwiki").
+3.  download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki).
 
 4.  (optional) verify your install:
     1) activate your virtual environment
