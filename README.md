@@ -212,7 +212,10 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
     4) if something is missing, you will see some error messages popping up. Some tips about how to fix the
        errors are also given. You can follow the tips to fix those problems and repeat Step 4 to verify your
-       install until no error occurs.
+       install until no error occurs (as shown below).
+        
+       ![1](https://user-images.githubusercontent.com/18594210/196347681-703c9679-9193-4494-86eb-2d60f3eb82b1.png)
+
 
 5.  here we provided two examples of using a public dataset ([OASIS-3](https://www.oasis-brains.org/)) 
     to train a model from scratch, see 
@@ -222,7 +225,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     experiments/010_OASIS3/run_Siemens_TrioTim.py
     ```
     
-    you can also run these two examples:
+    you can also run these two examples if you organized the dataset structure correctly:
     
     ```bash
     cd .../experiments/010_OASIS3/
