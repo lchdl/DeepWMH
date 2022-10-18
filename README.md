@@ -22,9 +22,12 @@ Also, this tool is based on Python 3, Python 2 is deprecated and should no longe
 The fastest way of applying our tool to your research is by directly using our pre-trained model.
 To use our pre-trained model for inference, please carefully follow the steps listed below:
 
-1.  create a new Python 3 virtual environment using "python3 -m venv /path/to/your/virtual/env/"
+1.  create a new Python 3 virtual environment using 
+    ```bash
+    python3 -m venv /path/to/your/virtual/env/
+    ```
     for more detailed information about how to create a Python 3 virtual environment, please
-    refer to the following link: "https://docs.python.org/3/library/venv.html". For simplicity,
+    refer to this [link](https://docs.python.org/3/library/venv.html). For simplicity,
     here I assume you want to create your environment under "/home/\<username\>/freeseg/venv_freeseg/".
     To achieve this you need to execute the following commands (replace "\<username\>" with your actual 
     user name):
