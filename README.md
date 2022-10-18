@@ -11,9 +11,6 @@ Annotation free white matter hyperintensities (WMH) segmentation using deep lear
 ## About
 
 This package is used for accurately segmenting WMH lesions using T2FLAIR images without labeled data.
-Besides, you can treat this package as a set of APIs which ensembles lots of existing tools.
-If you use our code in your work, please cite the following paper:
-<...>
 
 ## Requirements
 
