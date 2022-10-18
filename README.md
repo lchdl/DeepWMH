@@ -28,7 +28,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 1.  create a new Python 3 virtual environment using "python3 -m venv /path/to/your/virtual/env/"
     for more detailed information about how to create a Python 3 virtual environment, please
     refer to the following link: "https://docs.python.org/3/library/venv.html". For simplicity,
-    here I assume you want to create your environment under "/home/<username>/freeseg/venv_freeseg/".
+    here I assume you want to create your environment under "/home/\<username\>/freeseg/venv_freeseg/".
     To achieve this you need to execute the following commands (replace "\<username\>" with your actual 
     user name):
 
@@ -55,8 +55,8 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
 3.  download nnU-Net source code from "https://github.com/lchdl/nnUNet" (PLEASE download the forked 
     version above, DO NOT download from https://github.com/MIC-DKFZ/nnUNet as the forked version has 
-    made some necessary changes). Unzip the code to "/home/<username>/freeseg/external/nnunet_custom/". 
-    Make sure "setup.py" is in this directory, such as "/home/<username>/freeseg/external/nnunet_custom/setup.py"
+    made some necessary changes). Unzip the code to "/home/\<username\>/freeseg/external/nnunet_custom/". 
+    Make sure "setup.py" is in this directory, such as "/home/\<username\>/freeseg/external/nnunet_custom/setup.py"
 
 4.  "cd" into the directory where setup.py is located, then execute the following command:
 
@@ -69,8 +69,8 @@ To use our pre-trained model for inference, please carefully follow the steps li
     CUDA/cuDNN version is compatible with your GPU driver version.
 
 5.  download main toolkit from "https://github.com/lchdl/annotation_free_wmh_seg", unzip the code under 
-    "/home/<username>/freeseg/main/", make sure "setup.py" is located in 
-    "/home/<username>/freeseg/main/setup.py", then
+    "/home/\<username\>/freeseg/main/", make sure "setup.py" is located in 
+    "/home/\<username\>/freeseg/main/setup.py", then
 
     ```bash
     cd /home/<username>/freeseg/main/
@@ -80,7 +80,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 6.  download and unzip ROBEX from "https://www.nitrc.org/projects/robex", then add:
 
     ```bash
-    export ROBEX_DIR="/path/to/your/ROBEX/dir/"
+    export ROBEX_DIR="/path/to/your/unzipped/ROBEX/dir/"
     ```
     
     in your ~/.bashrc, make sure "runROBEX.sh" is in this directory, then 
@@ -95,6 +95,25 @@ To use our pre-trained model for inference, please carefully follow the steps li
     correction. You can also skip this step if you don't want to install it. However, the segmentation performance
     can be seriously affected if the image is corrupted by strong intensity bias due to magnetic field inhomogeneity.
     For optimal performance I strongly recommend you to install ANTs.
+
+    > **Verify your install**: to see whether ANTs is installed correctly on your system, after the installation you need to type in
+    > ```
+    > antsRegistration --version
+    > ```
+    > and
+    > ```
+    > N4BiasFieldCorrection --version
+    > ```
+    > in your console. It should produce output such as:
+    > ```
+    > ANTs Version: 3.0.0.0.dev13-ga16cc
+    > Compiled: Jan 22 2019 00:23:29
+    > ```
+    > Then test if `antsApplyTransforms` can work:
+    > ```
+    > antsApplyTransforms
+    > ```
+    > if no error shows, then ANTs is successfully installed.
 
 8.  (optional) verify your install:
     1) activate your virtual environment
@@ -166,7 +185,15 @@ To use our pre-trained model for inference, please carefully follow the steps li
     
     after the installation.
 
-3.  download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki).
+3.  download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki) (FMRIB Software Library).
+
+    > **How to install**: FSL is installed using the *fsl_installer.py* downloaded from [here](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation). You need to register your personal information to the FSL site before download. After download you need to run the installer script and wait for the installation to finish.
+    >
+    > **Verify your install**: when the installation finished, type in
+    > ```
+    > bet -h
+    > ```
+    > in your console. If no error occurs then everything is OK! :)
 
 4.  (optional) verify your install:
     1) activate your virtual environment
