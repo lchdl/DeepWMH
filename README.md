@@ -29,7 +29,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     for more detailed information about how to create a Python 3 virtual environment, please
     refer to the following link: "https://docs.python.org/3/library/venv.html". For simplicity,
     here I assume you want to create your environment under "/home/<username>/freeseg/venv_freeseg/".
-    To achieve this you need to execute the following commands (replace "<username>" with your actual 
+    To achieve this you need to execute the following commands (replace "\<username\>" with your actual 
     user name):
 
     ```bash
@@ -51,7 +51,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     pip install wheel
     ```
 
-    NOTE: the virtual environment should ALWAYS be activated during the following steps. 
+    NOTE: the virtual environment should <b><i>always</i></b> be activated during the following steps. 
 
 3.  download nnU-Net source code from "https://github.com/lchdl/nnUNet" (PLEASE download the forked 
     version above, DO NOT download from https://github.com/MIC-DKFZ/nnUNet as the forked version has 
