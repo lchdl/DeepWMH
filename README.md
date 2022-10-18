@@ -184,6 +184,8 @@ To use our pre-trained model for inference, please carefully follow the steps li
     ```sudo apt-get install csh tcsh```
     
     after the installation.
+    
+    > A license key ([link](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall)) is also needed before using FreeSurfer.
 
 3.  download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki) (FMRIB Software Library).
 
