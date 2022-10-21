@@ -1,5 +1,5 @@
-# NOTE
-<i><b>The relevant paper is currently under review. We will upload the code after the work has been published.</b></i>
+# === NOTE ===
+<i><b>The relevant paper is currently under review. We will upload the complete code and pre-trained model after the work has been published.</b></i>
 
 # annotation_free_wmh_seg
 Annotation free white matter hyperintensities (WMH) segmentation using deep learning.
