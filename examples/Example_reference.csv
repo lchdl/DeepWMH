@@ -1,0 +1,11 @@
+case,desc,flair,label1,label2
+REF0001,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0002,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0003,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0004,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0005,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0006,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0007,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0008,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0009,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
+REF0010,HCwoWMH,/path/to/your/T2FLAIR.nii.gz,/path/to/your/brain_mask.nii.gz,/path/to/your/prior_label.nii.gz
