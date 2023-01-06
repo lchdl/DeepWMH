@@ -1,5 +1,5 @@
 # === NOTE ===
-<i><b>The relevant paper is currently under review. We will upload the complete code and pre-trained model after the work has been published.</b></i>
+<i><b>The relevant paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
 # annotation_free_wmh_seg
 Annotation free white matter hyperintensities (WMH) segmentation using deep learning.
@@ -143,9 +143,15 @@ To use our pre-trained model for inference, please carefully follow the steps li
     freeseg_WMH_predict -h
     ```
 
-    if no error occurs, then the installation is complete!
+    if no error occurs, then the installation is complete! Now you are ready to use our pretrained model for
+    segmentation.
 
-10. download our pre-trained model from "https://github.com/lchdl/annotation_free_wmh_seg". Then use
+10. download our pre-trained model (~200 MB) from 
+
+    1) "https://drive.google.com/drive/folders/1CDJkY5F95sW638UGjohWDqXvPtBTI1w3?usp=share_link" or
+    2) "https://pan.baidu.com/s/1j7aESa4NEcu95gsHLR9BqQ?pwd=yr3o"
+    
+    Then use
 
     ```bash
     freeseg_WMH_install -m <tar_gz_file> -o <model_install_dir>
