@@ -1,9 +1,6 @@
 # === NOTE ===
 <i><b>The relevant paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
-# annotation_free_wmh_seg
-Annotation free white matter hyperintensities (WMH) segmentation using deep learning.
-
 # Table of contents
 
 - [About](#about)
@@ -13,6 +10,7 @@ Annotation free white matter hyperintensities (WMH) segmentation using deep lear
 
 ## About
 
+Annotation free white matter hyperintensities (WMH) segmentation using deep learning.
 This package is used for accurately segmenting WMH lesions using T2FLAIR images without labeled data.
 
 ## Requirements
