@@ -8,8 +8,8 @@ print('Chenghao Liu, Xiangzhu Zeng, Kongming Liang, Yizhou Yu, Chuyang Ye. '
       '"Improved Brain Lesion Segmentation with Anatomical Priors from Healthy Subjects". '
       'Medical Image Computing and Computer Assisted Intervention (MICCAI), 2021.')
 print('')
-print('If you have any question or found any bug in the code, please open an issue at '
-      'https://github.com/lchdl/NLL_anomaly_detection.')
+print('If you have any question or found any bug in the code, please open an issue or '
+      'a pull request at https://github.com/lchdl/annotation_free_wmh_seg.')
 print('')
 
 print('')
