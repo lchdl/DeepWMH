@@ -1,3 +1,4 @@
+import deepwmh
 import sys, time
 from deepwmh.utilities.file_ops import files_exist, gd, join_path, file_exist, mkdir
 from deepwmh.utilities.data_io import try_load_nifti, write_csv_simple
@@ -37,7 +38,7 @@ print(
 # * This script can be used as a template when applying the pipeline to     #
 # other datasets.                                                           #
 #                                                                           #
-# * image registration is time consuming and it is highly suggested that    #
+# * Image registration is time consuming and it is highly suggested that    #
 # you run the whole pipeline on a CPU cluster with at least one CUDA GPU    #
 # available.                                                                #
 #                                                                           #
@@ -133,7 +134,7 @@ print('** Please change it to your actual dataset location before running the fo
 
 time.sleep(5)
 
-print('Selected GPU: %d' % GPU_id)
+print('Selected GPU index: %d' % GPU_id)
 
 script_dir = sys.path[0]
 
