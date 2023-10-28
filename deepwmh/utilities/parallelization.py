@@ -4,7 +4,7 @@
 
 from time import sleep
 from typing import Callable, List
-from freeseg.utilities.misc import kill_process_tree, minibar, Timer
+from deepwmh.utilities.misc import kill_process_tree, minibar, Timer
 import multiprocessing
 import traceback
 from multiprocessing import Pool
@@ -73,7 +73,7 @@ def run_parallel(worker_function:Callable, list_of_tasks_args: List[tuple], num_
     the run_parallel(...) in a ignore_SIGINT() context to temporarily disable keyboard interrupt 
     (Ctrl+C) such as:
 
-    >>> from freeseg.utilities.misc import ignore_SIGINT
+    >>> from deepwmh.utilities.misc import ignore_SIGINT
     >>> with ignore_SIGINT():
     >>>     run_parallel(...)
 

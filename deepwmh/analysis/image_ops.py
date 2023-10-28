@@ -1,5 +1,5 @@
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.data_io import load_nifti, save_nifti, try_load_nifti
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.data_io import load_nifti, save_nifti, try_load_nifti
 from typing import Union
 import warnings
 import numpy as np

@@ -1,12 +1,12 @@
 #
 # install pretrained model (*.tar.gz) into your machine.
-# the installed model can be used using "freeseg_WMH_predict" command
+# the installed model can be used using "DeepWMH_predict" command
 #
 
 import argparse
 import os
-from freeseg.utilities.file_ops import cp, dir_exist, file_exist, join_path, ls, mkdir, rm
-from freeseg.utilities.data_io import load_pkl, save_pkl, targz_compress, targz_uncompress
+from deepwmh.utilities.file_ops import cp, dir_exist, file_exist, join_path, ls, mkdir, rm
+from deepwmh.utilities.data_io import load_pkl, save_pkl, targz_compress, targz_uncompress
 
 def pack_and_release_nnUNet_model(task_name, output_folder, 
     nnUNet_name = 'nnUNet', network_config = '3d_fullres', trainer_name = 'nnUNetTrainerV2',

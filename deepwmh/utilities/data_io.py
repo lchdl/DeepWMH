@@ -9,7 +9,7 @@ from xlsxwriter.format import Format
 from copy import deepcopy
 from scipy.io import loadmat
 from nibabel import processing as nibproc
-from freeseg.utilities.file_ops import abs_path, dir_exist, file_empty, file_exist, join_path, gd, gn, mkdir
+from deepwmh.utilities.file_ops import abs_path, dir_exist, file_empty, file_exist, join_path, gd, gn, mkdir
 
 # utility function used to compress a file into "*.gz"
 # (not suitable for compressing folders)

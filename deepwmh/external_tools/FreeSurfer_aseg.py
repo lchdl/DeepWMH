@@ -1,7 +1,7 @@
-from freeseg.utilities.file_ops import abs_path, file_exist, gd, join_path, dir_exist, mkdir, rm
-from freeseg.utilities.data_io import load_nifti, save_nifti, try_load_nifti
-from freeseg.utilities.external_call import run_shell, try_shell
-from freeseg.utilities.parallelization import run_parallel
+from deepwmh.utilities.file_ops import abs_path, file_exist, gd, join_path, dir_exist, mkdir, rm
+from deepwmh.utilities.data_io import load_nifti, save_nifti, try_load_nifti
+from deepwmh.utilities.external_call import run_shell, try_shell
+from deepwmh.utilities.parallelization import run_parallel
 import numpy as np
 import os
 

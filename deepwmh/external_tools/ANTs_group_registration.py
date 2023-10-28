@@ -1,7 +1,7 @@
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.external_call import run_shell, try_shell
-from freeseg.utilities.file_ops import abs_path, cwd, gd, join_path, make_unique_dir, mkdir, mv, rm
-from freeseg.utilities.data_io import load_csv_simple, try_load_mat, try_load_nifti
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.external_call import run_shell, try_shell
+from deepwmh.utilities.file_ops import abs_path, cwd, gd, join_path, make_unique_dir, mkdir, mv, rm
+from deepwmh.utilities.data_io import load_csv_simple, try_load_mat, try_load_nifti
 import argparse
 import warnings
 

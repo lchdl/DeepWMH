@@ -1,5 +1,5 @@
 from contextlib import contextmanager
-from freeseg.utilities.file_ops import file_exist, join_path, mkdir
+from deepwmh.utilities.file_ops import file_exist, join_path, mkdir
 import os, sys, time, datetime
 import signal
 import psutil

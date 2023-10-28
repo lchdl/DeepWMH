@@ -4,7 +4,7 @@ import matplotlib
 matplotlib.use('agg') 
 import matplotlib.pyplot as plt
 import matplotlib.ticker
-from freeseg.utilities.file_ops import file_exist, gd, mkdir
+from deepwmh.utilities.file_ops import file_exist, gd, mkdir
 
 #####################################################
 ## define some plot functions for general purposes ##
@@ -234,7 +234,7 @@ class PlotCanvas:
             mask=None)
 
 
-from freeseg.utilities.colormaps import find_colormap_func
+from deepwmh.utilities.colormaps import find_colormap_func
 import numpy as np
 
 def plot_mat(m: np.ndarray, save_file: str = "mat.pdf", cmap: str = 'grayscale', normalize_data: bool = True):

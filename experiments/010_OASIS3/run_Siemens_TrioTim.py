@@ -1,9 +1,9 @@
 import sys, time
-from freeseg.utilities.file_ops import files_exist, gd, join_path, file_exist, mkdir
-from freeseg.utilities.data_io import try_load_nifti, write_csv_simple
-from freeseg.utilities.external_call import run_shell
-from freeseg.external_tools.FreeSurfer_aseg import convert_FreeSurfer_aseg, run_FreeSurfer_aseg
-from freeseg.main.integrity_check import check_system_integrity
+from deepwmh.utilities.file_ops import files_exist, gd, join_path, file_exist, mkdir
+from deepwmh.utilities.data_io import try_load_nifti, write_csv_simple
+from deepwmh.utilities.external_call import run_shell
+from deepwmh.external_tools.FreeSurfer_aseg import convert_FreeSurfer_aseg, run_FreeSurfer_aseg
+from deepwmh.main.integrity_check import check_system_integrity
 
 print(
 '''
@@ -230,7 +230,7 @@ for case in OASIS3_subjects_info['Siemens_TrioTim_training']:
 # 5. now launch the pipeline and wait it to finish 
 ##############################################################################
 
-run_shell('freeseg_WMH_train --reference %s --training %s -j %d --output-folder %s --gpu %d --skip-integrity-check' % \
+run_shell('DeepWMH_train --reference %s --training %s -j %d --output-folder %s --gpu %d --skip-integrity-check' % \
     (reference_csv, training_csv, 4, output_folder, GPU_id))
 
 print('\n\n** Pipeline training is now finished! **\n\n')
@@ -243,7 +243,7 @@ print('Final segmentation can be found in "%s".' % Training_fit)
 print('**     Now starting evaluation...     **')
 Expert_annotation = join_path(script_dir, 'Manual_annotations', 'Siemens_TrioTim')
 
-from freeseg.analysis.metrics import BinaryDiceEvaluation
+from deepwmh.analysis.metrics import BinaryDiceEvaluation
 
 def find_rater1(patient_name):
     filepath = join_path(Expert_annotation, patient_name, 'rater_1.nii.gz')

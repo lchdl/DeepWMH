@@ -1,14 +1,14 @@
 import os
 import argparse
 import numpy as np
-from freeseg.analysis.image_ops import remove_3mm_sparks
-from freeseg.utilities.external_call import run_shell
-from freeseg.utilities.misc import contain_duplicates
-from freeseg.utilities.nii_preview import nii_as_gif, nii_slice_range
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.data_io import get_nifti_pixdim, load_nifti, save_nifti, try_load_gif, try_load_nifti
-from freeseg.main.integrity_check import check_dataset, check_system_integrity
-from freeseg.utilities.file_ops import abs_path, cp, dir_exist, file_exist, gd, gn, join_path, ls, mkdir, rm
+from deepwmh.analysis.image_ops import remove_3mm_sparks
+from deepwmh.utilities.external_call import run_shell
+from deepwmh.utilities.misc import contain_duplicates
+from deepwmh.utilities.nii_preview import nii_as_gif, nii_slice_range
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.data_io import get_nifti_pixdim, load_nifti, save_nifti, try_load_gif, try_load_nifti
+from deepwmh.main.integrity_check import check_dataset, check_system_integrity
+from deepwmh.utilities.file_ops import abs_path, cp, dir_exist, file_exist, gd, gn, join_path, ls, mkdir, rm
 
 def _parallel_do_preprocessing(params):
 	raw_image_path, output_image_path = params

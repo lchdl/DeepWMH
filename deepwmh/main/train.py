@@ -1,11 +1,11 @@
 import argparse
-from freeseg.external_tools.ANTs_group_registration import ANTsGroupRegistration, antsApplyTransforms
-from freeseg.pipeline.DCNN_multistage import Pipeline_DCNN_Multistage_nnUNet
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.external_call import run_shell
-from freeseg.utilities.file_ops import abs_path, chmod, gd, gn, join_path, ls, mkdir, rm
-from freeseg.utilities.data_io import load_csv_simple, try_load_nifti, write_csv_simple
-from freeseg.main.integrity_check import check_system_integrity, check_dataset
+from deepwmh.external_tools.ANTs_group_registration import ANTsGroupRegistration, antsApplyTransforms
+from deepwmh.pipeline.DCNN_multistage import Pipeline_DCNN_Multistage_nnUNet
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.external_call import run_shell
+from deepwmh.utilities.file_ops import abs_path, chmod, gd, gn, join_path, ls, mkdir, rm
+from deepwmh.utilities.data_io import load_csv_simple, try_load_nifti, write_csv_simple
+from deepwmh.main.integrity_check import check_system_integrity, check_dataset
 
 
 # utility function to collect image registration pairs
@@ -141,7 +141,7 @@ def main():
             '##################################################\n'        \
             '# Cached command for training the whole pipeline #\n'        \
             '##################################################\n\n'      \
-            'freeseg_WMH_train \\\n'                                      \
+            'DeepWMH_train \\\n'                                          \
             '-s %s \\\n'                                                  \
             '-t %s \\\n'                                                  \
             '-o %s \\\n'                                                  \

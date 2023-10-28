@@ -1,6 +1,6 @@
 import argparse
-from freeseg.utilities.external_call import run_shell, try_shell
-from freeseg.utilities.file_ops import gd, laf, mkdir
+from deepwmh.utilities.external_call import run_shell, try_shell
+from deepwmh.utilities.file_ops import gd, laf, mkdir
 
 def main():
     parser = argparse.ArgumentParser(

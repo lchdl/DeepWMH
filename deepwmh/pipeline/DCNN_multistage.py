@@ -3,16 +3,16 @@ import os
 import json
 import datetime
 import numpy as np
-from freeseg.analysis.image_ops import remove_3mm_sparks
-from freeseg.analysis.metrics import hard_dice_binary
-from freeseg.analysis.lesion_analysis import LesionAnalyzer
-from freeseg.utilities.file_ops import abs_path, cp, file_exist, files_exist, gn, join_path, laf, mkdir, ls, rm
-from freeseg.utilities.nii_preview import nii_as_gif, nii_slice_range
-from freeseg.utilities.data_io import get_nifti_header, get_nifti_pixdim, load_nifti, load_nifti_simple, load_pkl, \
+from deepwmh.analysis.image_ops import remove_3mm_sparks
+from deepwmh.analysis.metrics import hard_dice_binary
+from deepwmh.analysis.lesion_analysis import LesionAnalyzer
+from deepwmh.utilities.file_ops import abs_path, cp, file_exist, files_exist, gn, join_path, laf, mkdir, ls, rm
+from deepwmh.utilities.nii_preview import nii_as_gif, nii_slice_range
+from deepwmh.utilities.data_io import get_nifti_header, get_nifti_pixdim, load_nifti, load_nifti_simple, load_pkl, \
     save_nifti, save_pkl, targz_compress, try_load_gif, try_load_nifti
-from freeseg.utilities.misc import SimpleTxtLog, Checkpoints
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.external_call import run_shell
+from deepwmh.utilities.misc import SimpleTxtLog, Checkpoints
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.external_call import run_shell
 
 #####################################
 # some utility functions for nnunet #

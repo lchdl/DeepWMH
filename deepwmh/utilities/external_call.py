@@ -2,7 +2,7 @@ import os
 import subprocess
 from time import sleep
 from typing import Union
-from freeseg.utilities.misc import ignore_SIGINT, kill_process_tree
+from deepwmh.utilities.misc import ignore_SIGINT, kill_process_tree
 import shlex
 
 # emulating shell command

@@ -3,7 +3,7 @@
 ##
 
 from typing import Union
-from freeseg.utilities.plot import PlotCanvas
+from deepwmh.utilities.plot import PlotCanvas
 import random
 import warnings
 import numpy as np
@@ -11,11 +11,11 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from copy import deepcopy
-from freeseg.utilities.data_io import SimpleExcelWriter, SimpleExcelReader, load_nifti, load_nifti_simple, save_nifti, targz_compress
-from freeseg.utilities.file_ops import cp, dir_exist, file_exist, join_path, ls, mkdir, gd
-from freeseg.analysis.image_ops import connected_components
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.misc import contain_duplicates, ignore_SIGINT, minibar, printi
+from deepwmh.utilities.data_io import SimpleExcelWriter, SimpleExcelReader, load_nifti, load_nifti_simple, save_nifti, targz_compress
+from deepwmh.utilities.file_ops import cp, dir_exist, file_exist, join_path, ls, mkdir, gd
+from deepwmh.analysis.image_ops import connected_components
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.misc import contain_duplicates, ignore_SIGINT, minibar, printi
 from scipy import stats
 from statsmodels.nonparametric.smoothers_lowess import lowess
 import scipy.interpolate

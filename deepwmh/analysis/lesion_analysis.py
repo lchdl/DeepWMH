@@ -3,11 +3,11 @@ import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
 from skimage.filters import threshold_otsu
-from freeseg.analysis.image_ops import average_contiguous_labels, component_filtering, group_mean, group_std, mean_std_grid, remove_3mm_sparks, z_score, median_3mm
-from freeseg.utilities.file_ops import cp, file_exist, gn, join_path, mkdir
-from freeseg.utilities.data_io import get_nifti_header, get_nifti_pixdim, load_nifti, load_nifti_simple, load_pkl, save_nifti, save_pkl, try_load_nifti
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.misc import SimpleTxtLog, TimeStamps
+from deepwmh.analysis.image_ops import average_contiguous_labels, component_filtering, group_mean, group_std, mean_std_grid, remove_3mm_sparks, z_score, median_3mm
+from deepwmh.utilities.file_ops import cp, file_exist, gn, join_path, mkdir
+from deepwmh.utilities.data_io import get_nifti_header, get_nifti_pixdim, load_nifti, load_nifti_simple, load_pkl, save_nifti, save_pkl, try_load_nifti
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.misc import SimpleTxtLog, TimeStamps
 
 # utility function to plot histogram curves
 def hist_plot(x, y, r, rs, save_file, fig_size=(8,6), dpi=144, thresholds=None, simple_plot = False):

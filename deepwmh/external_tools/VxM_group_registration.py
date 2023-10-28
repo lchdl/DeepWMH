@@ -4,14 +4,14 @@ import argparse
 import numpy as np
 from typing import Union
 from scipy.ndimage import zoom
-from freeseg.utilities.parallelization import run_parallel
-from freeseg.utilities.misc import ignore_SIGINT
-from freeseg.utilities.external_call import run_shell, try_shell
-from freeseg.utilities.data_io import get_nifti_pixdim, load_csv_simple, load_nifti, load_nifti_simple, \
+from deepwmh.utilities.parallelization import run_parallel
+from deepwmh.utilities.misc import ignore_SIGINT
+from deepwmh.utilities.external_call import run_shell, try_shell
+from deepwmh.utilities.data_io import get_nifti_pixdim, load_csv_simple, load_nifti, load_nifti_simple, \
 	save_nifti_simple, save_nifti, try_load_nifti
-from freeseg.utilities.file_ops import cp, file_exist, gd, gn, join_path, laf, mkdir, rm
-from freeseg.pipeline.DCNN_multistage import Checkpoints
-from freeseg.external_tools.ANTs_group_registration import antsApplyTransforms, antsRegistration
+from deepwmh.utilities.file_ops import cp, file_exist, gd, gn, join_path, laf, mkdir, rm
+from deepwmh.pipeline.DCNN_multistage import Checkpoints
+from deepwmh.external_tools.ANTs_group_registration import antsApplyTransforms, antsRegistration
 
 def determine_internal_shape(expected_shape, template_shape, template_resolution):
 	def _parse_triplet(s):

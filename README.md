@@ -29,19 +29,19 @@ To use our pre-trained model for inference, please carefully follow the steps li
     ```
     for more detailed information about how to create a Python 3 virtual environment, please
     refer to this [link](https://docs.python.org/3/library/venv.html). For simplicity,
-    here I assume you want to create your environment under "/home/\<username\>/freeseg/venv_freeseg/".
+    here I assume you want to create your environment under "/home/\<username\>/deepwmh/venv_deepwmh/".
     To achieve this you need to execute the following commands (replace "\<username\>" with your actual 
     user name):
 
     ```bash
     python3 -m pip install --user virtualenv
-    python3 -m venv /home/<username>/freeseg/venv_freeseg/
+    python3 -m venv /home/<username>/deepwmh/venv_deepwmh/
     ```
 
 2.  activate your newly created virtual environment:
 
     ```bash
-    source /home/<username>/freeseg/venv_freeseg/bin/activate
+    source /home/<username>/deepwmh/venv_deepwmh/bin/activate
     ```
 
     then update pip, setuptools, and wheel:
@@ -56,8 +56,8 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
 3.  download nnU-Net source code from "https://github.com/lchdl/nnUNet" (PLEASE download the forked 
     version above, DO NOT download from https://github.com/MIC-DKFZ/nnUNet as the forked version has 
-    made some necessary changes). Unzip the code to "/home/\<username\>/freeseg/external/nnunet_custom/". 
-    Make sure "setup.py" is in this directory, such as "/home/\<username\>/freeseg/external/nnunet_custom/setup.py"
+    made some necessary changes). Unzip the code to "/home/\<username\>/deepwmh/external/nnunet_custom/". 
+    Make sure "setup.py" is in this directory, such as "/home/\<username\>/deepwmh/external/nnunet_custom/setup.py"
 
 4.  "cd" into the directory where setup.py is located, then execute the following command:
 
@@ -69,12 +69,12 @@ To use our pre-trained model for inference, please carefully follow the steps li
     As nnU-Net uses PyTorch, this command will also download and install PyTorch. Make sure your 
     CUDA/cuDNN version is compatible with your GPU driver version.
 
-5.  download main toolkit from "https://github.com/lchdl/annotation_free_wmh_seg", unzip the code under 
-    "/home/\<username\>/freeseg/main/", make sure "setup.py" is located in 
-    "/home/\<username\>/freeseg/main/setup.py", then
+5.  download main toolkit from "https://github.com/lchdl/DeepWMH", unzip the code under 
+    "/home/\<username\>/deepwmh/main/", make sure "setup.py" is located in 
+    "/home/\<username\>/deepwmh/main/setup.py", then
 
     ```bash
-    cd /home/<username>/freeseg/main/
+    cd /home/<username>/deepwmh/main/
     pip install -e .
     ```
 
@@ -127,7 +127,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     3) then, enter & run the following script line by line:
 
     ```bash
-    from freeseg.main.integrity_check import check_system_integrity
+    from deepwmh.main.integrity_check import check_system_integrity
     check_system_integrity(verbose=True, ignore_ANTs=True, ignore_FreeSurfer=True, ignore_FSL=True)
     ```
 
@@ -138,7 +138,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 9.  after installation, run
 
     ```bash
-    freeseg_WMH_predict -h
+    DeepWMH_predict -h
     ```
 
     if no error occurs, then the installation is complete! Now you are ready to use our pretrained model for
@@ -152,7 +152,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     Then use
 
     ```bash
-    freeseg_WMH_install -m <tar_gz_file> -o <model_install_dir>
+    DeepWMH_install -m <tar_gz_file> -o <model_install_dir>
     ```
     
     to install model (as indicated by <tar_gz_file>) to a specific location (as indicated by <model_install_dir>).
@@ -160,19 +160,19 @@ To use our pre-trained model for inference, please carefully follow the steps li
 11. using pre-trained model to segment WMH lesions from FLAIR images with the following command:
 
     ```bash
-    freeseg_WMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
+    DeepWMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
     ```
     
     > if you don't have ANTs toolkit installed on your machine (see Step 7 for how to install ANTs), you 
     > need to add "--skip-preprocessing" to the end of the command, such as:
-    > <pre>freeseg_WMH_predict -i <...> -n <...> -m <...> -o <...> -g <...> <b>--skip-preprocessing</b></pre>
+    > <pre>DeepWMH_predict -i <...> -n <...> -m <...> -o <...> -g <...> <b>--skip-preprocessing</b></pre>
     > the segmentation performance can be seriously affected if the image is corrupted by strong intensity 
     > bias due to magnetic field inhomogeneity
 
     NOTE: you can specify multiple input images. The following command gives a complete example of this:
 
     ```bash
-    freeseg_WMH_predict \
+    DeepWMH_predict \
     -i /path/to/FLAIR_1.nii.gz /path/to/FLAIR_2.nii.gz /path/to/FLAIR_3.nii.gz \
     -n subject_1               subject_2               subject_3 \
     -m /path/to/your/model/dir/ \
@@ -215,7 +215,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     3) then, enter & run the following script line by line:
 
     ```python
-    from freeseg.main.integrity_check import check_system_integrity
+    from deepwmh.main.integrity_check import check_system_integrity
     check_system_integrity()
     ```
 

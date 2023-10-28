@@ -1,9 +1,9 @@
-from freeseg.external_tools.ANTs_group_registration import get_ANTs_version_string
+from deepwmh.external_tools.ANTs_group_registration import get_ANTs_version_string
 import os, platform
-from freeseg.utilities.external_call import try_shell
-from freeseg.utilities.misc import printv
-from freeseg.utilities.file_ops import file_exist, join_path
-from freeseg.external_tools.FreeSurfer_aseg import check_FreeSurfer_install, get_FreeSurfer_version_string
+from deepwmh.utilities.external_call import try_shell
+from deepwmh.utilities.misc import printv
+from deepwmh.utilities.file_ops import file_exist, join_path
+from deepwmh.external_tools.FreeSurfer_aseg import check_FreeSurfer_install, get_FreeSurfer_version_string
 
 def check_system_integrity(verbose=True, 
     ignore_ANTs = False, 

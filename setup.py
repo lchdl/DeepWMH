@@ -8,15 +8,15 @@ except ImportError:
 
 #script_dir = sys.path[0]
 info_dict = {}
-exec(open('freeseg/info.py').read(), info_dict)
+exec(open('deepwmh/info.py').read(), info_dict)
 
 setup(
-    name='freeseg',
-    packages=find_namespace_packages(include=["freeseg", "freeseg.*"]),
+    name='deepwmh',
+    packages=find_namespace_packages(include=["deepwmh", "deepwmh.*"]),
     version=info_dict['__version__'],
     
     description=
-    'An accurate annotation-free white matter hyperintensity lesion segmentation algorithm '
+    'DeepWMH: An accurate annotation-free white matter hyperintensity lesion segmentation algorithm '
     'for medical image analysis based on multi-atlas image registration and negative log-likelihood.',
     
     author=info_dict['__author__'],
@@ -46,16 +46,16 @@ setup(
     ],
     entry_points={
         'console_scripts':[
-            'antsGroupRegistration = freeseg.external_tools.ANTs_group_registration:main',
-            'dcm2niix_py = freeseg.external_tools.dcm2niix:main',
-            'freeseg_WMH_train = freeseg.main.train:main',
-            'freeseg_WMH_predict = freeseg.main.predict:main',
-            'freeseg_WMH_install = freeseg.main.install_model:main'
+            'antsGroupRegistration = deepwmh.external_tools.ANTs_group_registration:main',
+            'dcm2niix_py = deepwmh.external_tools.dcm2niix:main',
+            'DeepWMH_train = deepwmh.main.train:main',
+            'DeepWMH_predict = deepwmh.main.predict:main',
+            'DeepWMH_install = deepwmh.main.install_model:main'
         ]
     },
     keywords=[
         'image segmentation', 'lesion segmentation' , 'unsupervised learning',
-        'annotation-free', 'annotation-free lesion segmentation', 'freeseg',
+        'annotation-free', 'annotation-free lesion segmentation', 'deepwmh',
         'medical image segmentation', 'unsupervised lesion segmentation', 
         'anomaly detection', 'NLL', 'negative log-likelihood',
         'white matter lesions', 'WMH', 'white matter hyperintensities'

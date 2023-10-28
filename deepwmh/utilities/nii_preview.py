@@ -1,6 +1,6 @@
-from freeseg.utilities.file_ops import gd, mkdir
-from freeseg.utilities.colormaps import find_colormap_func, get_valid_color_mappings
-from freeseg.utilities.data_io import get_nifti_pixdim, load_nifti, load_nifti_simple, try_load_nifti
+from deepwmh.utilities.file_ops import gd, mkdir
+from deepwmh.utilities.colormaps import find_colormap_func, get_valid_color_mappings
+from deepwmh.utilities.data_io import get_nifti_pixdim, load_nifti, load_nifti_simple, try_load_nifti
 import matplotlib
 matplotlib.use('agg') # use matplotlib in command line mode
 import warnings
