@@ -8,7 +8,7 @@ except ImportError:
 
 #script_dir = sys.path[0]
 info_dict = {}
-exec(open('deepwmh/info.py').read(), info_dict)
+exec(open('deepwmh/pkginfo.py').read(), info_dict)
 
 setup(
     name='deepwmh',
