@@ -1,4 +1,5 @@
-# === NOTE ===
+# Paper
+
 <i><b>The relevant paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
 # Table of contents
@@ -8,7 +9,7 @@
 - [Quick start: how to use our pretrained model (only for Linux-based systems)](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems)
 - [Advanced: how to train a model using data of my own? (only for Linux-based systems)](#advanced-how-to-train-a-model-using-data-of-my-own-only-for-linux-based-systems)
 
-## About
+## About DeepWMH
 
 Annotation free white matter hyperintensities (WMH) segmentation using deep learning.
 This package is used for accurately segmenting WMH lesions using T2FLAIR images without labeled data.
