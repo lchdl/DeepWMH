@@ -2,6 +2,8 @@
 
 <i><b>The relevant paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
+![segmentation example](https://github.com/lchdl/DeepWMH/blob/develop/examples/segmentation.png)
+
 # Table of contents
 
 - [About](#about)
