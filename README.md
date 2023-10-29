@@ -21,6 +21,11 @@ whole processing pipeline is shown below.
 
 ![DeepWMH lesion segmentation pipeline overview.](https://github.com/lchdl/DeepWMH/blob/develop/pipeline.png)
 
+The figure below shows a more detailed version of the processing pipeline. Please refer to the supplementary 
+materials for more information.
+
+![Method details.](https://github.com/lchdl/DeepWMH/blob/develop/method.png)
+
 ## Requirements
 
 Before installation, you may need to update your Python version if it is lower than "3.7.1".
