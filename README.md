@@ -11,8 +11,11 @@
 
 ## About DeepWMH
 
-Annotation free white matter hyperintensities (WMH) segmentation using deep learning.
-This package is used for accurately segmenting WMH lesions using T2FLAIR images without labeled data.
+DeepWMH is an annotation-free white matter hyperintensities (WMH) segmentation tool based on deep learning,
+designed for accurately segmenting WMH lesions using T2FLAIR images without labeled data. An overview of the 
+whole processing pipeline is shown below.
+
+![DeepWMH lesion segmentation pipeline overview.](https://github.com/lchdl/DeepWMH/blob/develop/pipeline.png)
 
 ## Requirements
 
