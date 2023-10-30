@@ -36,62 +36,49 @@ Also, this tool is based on Python 3, Python 2 is deprecated and should no longe
 The fastest way of applying our tool to your research is by directly using our pre-trained model.
 To use our pre-trained model for inference, please carefully follow the steps listed below:
 
-1.  create a new Python 3 virtual environment using 
+1.  Update your Python environment. Then, create a new virtual environment using the following commands:
     ```bash
-    python3 -m venv /path/to/your/virtual/env/
+    pip install -U pip                         # update pip
+    pip install -U setuptools                  # update setuptools
+    pip install wheel                          # install wheel
+    python -m pip install --user virtualenv    # install virtualenv
+    python -m venv <path_to_your_virtual_env>  # create a virtual environment under <path_to_your_virtual_env>
     ```
     for more detailed information about how to create a Python 3 virtual environment, please
-    refer to this [link](https://docs.python.org/3/library/venv.html). For simplicity,
-    here I assume you want to create your environment under "/home/\<username\>/deepwmh/venv_deepwmh/".
-    To achieve this you need to execute the following commands (replace "\<username\>" with your actual 
-    user name):
+    refer to this [link](https://docs.python.org/3/library/venv.html). 
+
+2.  Activate the virtual environment you just created:
 
     ```bash
-    python3 -m pip install --user virtualenv
-    python3 -m venv /home/<username>/deepwmh/venv_deepwmh/
+    source <path_to_your_virtual_env>/bin/activate
     ```
+    
+    NOTE: the virtual environment should <b><i>ALWAYS</i></b> be activated during the following steps. 
 
-2.  activate your newly created virtual environment:
+3.  Install PyTorch in your virtual environment. See https://pytorch.org/ for more info.
 
-    ```bash
-    source /home/<username>/deepwmh/venv_deepwmh/bin/activate
-    ```
+4.  Download nnU-Net source code from "https://github.com/lchdl/nnUNet_for_DeepWMH".
+    > PLEASE download the forked version above, DO NOT download from
+    > https://github.com/MIC-DKFZ/nnUNet as the forked version has 
+    > made some necessary changes.
 
-    then update pip, setuptools, and wheel:
-
-    ```bash
-    pip install -U pip
-    pip install -U setuptools
-    pip install wheel
-    ```
-
-    NOTE: the virtual environment should <b><i>always</i></b> be activated during the following steps. 
-
-3.  download nnU-Net source code from "https://github.com/lchdl/nnUNet" (PLEASE download the forked 
-    version above, DO NOT download from https://github.com/MIC-DKFZ/nnUNet as the forked version has 
-    made some necessary changes). Unzip the code to "/home/\<username\>/deepwmh/external/nnunet_custom/". 
-    Make sure "setup.py" is in this directory, such as "/home/\<username\>/deepwmh/external/nnunet_custom/setup.py"
-
-4.  "cd" into the directory where setup.py is located, then execute the following command:
+    Unzip the code, "cd" into the directory where setup.py is located, then execute the following command:
 
     ```bash
     pip install -e .
     ```
 
     This will install customized nnU-Net and all its dependencies into your environment.
-    As nnU-Net uses PyTorch, this command will also download and install PyTorch. Make sure your 
-    CUDA/cuDNN version is compatible with your GPU driver version.
+    > Please install PyTorch <i><b>BEFORE</i></b> nnU-Net as suggested in https://github.com/MIC-DKFZ/nnUNet,
+    > and make sure your CUDA/cuDNN version is compatible with your GPU driver version.
 
-5.  download main toolkit from "https://github.com/lchdl/DeepWMH", unzip the code under 
-    "/home/\<username\>/deepwmh/main/", make sure "setup.py" is located in 
-    "/home/\<username\>/deepwmh/main/setup.py", then
-
+5.  Download DeepWMH from "https://github.com/lchdl/DeepWMH".
+    Unzip the code, "cd" into the directory where setup.py is located, then execute the following command:
     ```bash
-    cd /home/<username>/deepwmh/main/
     pip install -e .
     ```
 
-6.  download and unzip ROBEX from "https://www.nitrc.org/projects/robex", then add:
+6.  Download and unzip ROBEX from "https://www.nitrc.org/projects/robex", then add:
 
     ```bash
     export ROBEX_DIR="/path/to/your/unzipped/ROBEX/dir/"
@@ -105,7 +92,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
     to update the change.
 
-7.  (optional) compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs". This is mainly for intensity
+7.  (Optional) compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs". This is mainly for intensity
     correction. You can also skip this step if you don't want to install it. However, the segmentation performance
     can be seriously affected if the image is corrupted by strong intensity bias due to magnetic field inhomogeneity.
     For optimal performance I strongly recommend you to install ANTs.
@@ -129,7 +116,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     > ```
     > if no error shows, then ANTs is successfully installed.
 
-8.  (optional) verify your install:
+8.  (Optional) verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
@@ -139,7 +126,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
     3) then, enter & run the following script line by line:
 
-    ```bash
+    ```python
     from deepwmh.main.integrity_check import check_system_integrity
     check_system_integrity(verbose=True, ignore_ANTs=True, ignore_FreeSurfer=True, ignore_FSL=True)
     ```
@@ -148,7 +135,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
        errors are also given. You can follow the tips to fix those problems and repeat Step 8 to verify your
        install until no error occurs.
 
-9.  after installation, run
+9.  After installation, run
 
     ```bash
     DeepWMH_predict -h
@@ -157,7 +144,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     if no error occurs, then the installation is complete! Now you are ready to use our pretrained model for
     segmentation.
 
-10. download our pre-trained model (~200 MB) from 
+10. Download our pre-trained model (~200 MB) from 
 
     1) "https://drive.google.com/drive/folders/1CDJkY5F95sW638UGjohWDqXvPtBTI1w3?usp=share_link" or
     2) "https://pan.baidu.com/s/1j7aESa4NEcu95gsHLR9BqQ?pwd=yr3o"
@@ -170,7 +157,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     
     to install model (as indicated by <tar_gz_file>) to a specific location (as indicated by <model_install_dir>).
 
-11. using pre-trained model to segment WMH lesions from FLAIR images with the following command:
+11. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
 
     ```bash
     DeepWMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
@@ -195,10 +182,10 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
 ## Advanced: how to train a model using data of my own? (only for Linux-based systems)
 
-1.  follow the Steps 1--9 in [Quick start](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems) section. Note that if you want to train a custom model, you <b><i>must</i></b> 
+1.  Follow the Steps 1--7 in [Quick start](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems) section. Note that if you want to train a custom model, you <b><i>must</i></b> 
     download and compile ANTs toolkit, Step 7 in [Quick start](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems) section is no longer optional.
 
-2.  download and install [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/). Note that you may also need to 
+2.  Download and install [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/). Note that you may also need to 
     install "csh" and "tcsh" shell by running 
     
     ```sudo apt-get install csh tcsh```
@@ -207,7 +194,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     
     > A license key ([link](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall)) is also needed before using FreeSurfer.
 
-3.  download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki) (FMRIB Software Library).
+3.  Download and install [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki) (FMRIB Software Library).
 
     > **How to install**: FSL is installed using the *fsl_installer.py* downloaded from [here](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation). You need to register your personal information to the FSL site before download. After download you need to run the installer script and wait for the installation to finish.
     >
@@ -217,7 +204,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     > ```
     > in your console. If no error occurs then everything is OK! :)
 
-4.  (optional) verify your install:
+4.  (Optional) verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
@@ -239,7 +226,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
        ![1](https://user-images.githubusercontent.com/18594210/196351063-732bfe8e-14d6-4fbc-8311-1e5ebbeeca04.png)
 
 
-5.  here we provided two examples of using a public dataset ([OASIS-3](https://www.oasis-brains.org/)) 
+5.  Here we provided two examples of using a public dataset ([OASIS-3](https://www.oasis-brains.org/)) 
     to train a model from scratch, see 
     
     ```
