@@ -232,7 +232,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
        errors are also given. You can follow the tips to fix those problems and repeat Step 4 to verify your
        install until no error occurs (as shown below).
         
-       ![1](https://user-images.githubusercontent.com/18594210/196351063-732bfe8e-14d6-4fbc-8311-1e5ebbeeca04.png)
+       ![integrity check](https://github.com/lchdl/DeepWMH/blob/develop/images/integrity_check.png)
 
 
 5.  Here we provided two examples of using a public dataset ([OASIS-3](https://www.oasis-brains.org/)) 
