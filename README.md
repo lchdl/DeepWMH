@@ -15,7 +15,7 @@ hyperintensity segmentation without requiring manual annotations for training</i
 
 # Table of contents
 
-- [About](#about)
+- [About DeepWMH](#about-deepwmh)
 - [Requirements](#requirements)
 - [Quick start: how to use our pretrained model (only for Linux-based systems)](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems)
 - [Advanced: how to train a model using data of my own? (only for Linux-based systems)](#advanced-how-to-train-a-model-using-data-of-my-own-only-for-linux-based-systems)
