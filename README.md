@@ -8,8 +8,8 @@ hyperintensity segmentation without requiring manual annotations for training</i
 <i><b>The paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
 <p align="center">
-  <img src="https://github.com/lchdl/DeepWMH/blob/develop/examples/segmentation.png" width="350" />
-  <img src="https://github.com/lchdl/DeepWMH/blob/develop/examples/segmentation2.png" width="460" /> 
+  <img src="https://github.com/lchdl/DeepWMH/blob/develop/images/segmentation.png" width="350" />
+  <img src="https://github.com/lchdl/DeepWMH/blob/develop/images/segmentation2.png" width="460" /> 
 </p>
 
 
@@ -28,12 +28,12 @@ DeepWMH is an annotation-free white matter hyperintensities (WMH) segmentation t
 designed for accurately segmenting WMH lesions using T2FLAIR images without labeled data. An overview of the 
 whole processing pipeline is shown below.
 
-![DeepWMH lesion segmentation pipeline overview.](https://github.com/lchdl/DeepWMH/blob/develop/pipeline.png)
+![DeepWMH lesion segmentation pipeline overview.](https://github.com/lchdl/DeepWMH/blob/develop/images/pipeline.png)
 
 The figure below shows a more detailed version of the processing pipeline. Please refer to the supplementary 
 materials for more information.
 
-![Method details.](https://github.com/lchdl/DeepWMH/blob/develop/method.png)
+![Method details.](https://github.com/lchdl/DeepWMH/blob/develop/images/method.png)
 
 ## Requirements
 
@@ -242,7 +242,6 @@ To use our pre-trained model for inference, please carefully follow the steps be
     experiments/010_OASIS3/run_Siemens_Biograph_mMR.py
     experiments/010_OASIS3/run_Siemens_TrioTim.py
     ```
-    
     you can also run these two examples if you organized the dataset structure correctly:
     
     ```bash
