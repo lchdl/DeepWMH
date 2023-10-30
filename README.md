@@ -204,7 +204,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     > ```
     > in your console. If no error occurs then everything is OK! :)
 
-4.  (Optional) verify your install:
+4.  <b>(Optional)</b> verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
