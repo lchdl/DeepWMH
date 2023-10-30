@@ -3,8 +3,10 @@
 <i><b>The relevant paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
 <p align="center">
-    <img width="415" height="367" src="https://github.com/lchdl/DeepWMH/blob/develop/examples/segmentation.png">
+  <img src="https://github.com/lchdl/DeepWMH/blob/develop/examples/segmentation.png" width="350" />
+  <img src="https://github.com/lchdl/DeepWMH/blob/develop/examples/segmentation2.png" width="460" /> 
 </p>
+
 
 # Table of contents
 
