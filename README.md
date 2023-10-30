@@ -33,8 +33,8 @@ Also, this tool is based on Python 3, Python 2 is deprecated and should no longe
 
 ## Quick start: how to use our pretrained model (only for Linux-based systems)
 
-The fastest way of applying our tool to your research is by directly using our pre-trained model.
-To use our pre-trained model for inference, please carefully follow the steps listed below:
+The fastest way of applying our tool to your research is by <i><b>using our pre-trained model</i></b> directly.
+To use our pre-trained model for inference, please carefully follow the steps below:
 
 1.  Update your Python environment. Then, create a new virtual environment using the following commands:
     ```bash
@@ -92,7 +92,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
     to update the change.
 
-7.  (Optional) compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs". This is mainly for intensity
+7.  <b>(Optional)</b> compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs". This is mainly for intensity
     correction. You can also skip this step if you don't want to install it. However, the segmentation performance
     can be seriously affected if the image is corrupted by strong intensity bias due to magnetic field inhomogeneity.
     For optimal performance I strongly recommend you to install ANTs.
@@ -116,7 +116,7 @@ To use our pre-trained model for inference, please carefully follow the steps li
     > ```
     > if no error shows, then ANTs is successfully installed.
 
-8.  (Optional) verify your install:
+8.  <b>(Optional)</b> verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
@@ -173,11 +173,11 @@ To use our pre-trained model for inference, please carefully follow the steps li
 
     ```bash
     DeepWMH_predict \
-    -i /path/to/FLAIR_1.nii.gz /path/to/FLAIR_2.nii.gz /path/to/FLAIR_3.nii.gz \
-    -n subject_1               subject_2               subject_3 \
-    -m /path/to/your/model/dir/ \
-    -o /path/to/your/output/dir/ \
-    -g 0
+    -i /path/to/FLAIR_1.nii.gz /path/to/FLAIR_2.nii.gz /path/to/FLAIR_3.nii.gz \ # specify three FLAIR images
+    -n subject_1               subject_2               subject_3 \               # then give three subject names
+    -m /path/to/your/model/dir/ \                                                # model installation directory
+    -o /path/to/your/output/dir/ \                                               # output directory
+    -g 0                                                                         # gpu index
     ```
 
 ## Advanced: how to train a model using data of my own? (only for Linux-based systems)
