@@ -173,8 +173,8 @@ To use our pre-trained model for inference, please carefully follow the steps be
     ```
     
     > if you don't have ANTs toolkit installed on your machine (see Step 7 for how to install ANTs), you 
-    > need to add "--skip-preprocessing" to the end of the command, such as:
-    > <pre>DeepWMH_predict -i <...> -n <...> -m <...> -o <...> -g <...> <b>--skip-preprocessing</b></pre>
+    > need to add "--skip-bfc" to the end of the command, such as:
+    > <pre>DeepWMH_predict -i <...> -n <...> -m <...> -o <...> -g <...> <b>--skip-bfc</b></pre>
     > the segmentation performance can be seriously affected if the image is corrupted by strong intensity 
     > bias due to magnetic field inhomogeneity
 

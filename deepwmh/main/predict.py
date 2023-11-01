@@ -10,7 +10,7 @@ from deepwmh.utilities.data_io import get_nifti_pixdim, load_nifti, save_nifti, 
 from deepwmh.main.integrity_check import check_dataset, check_system_integrity
 from deepwmh.utilities.file_ops import abs_path, cp, dir_exist, file_exist, gd, gn, join_path, ls, mkdir, rm
 
-def _parallel_do_preprocessing(params):
+def _parallel_do_bias_field_correction(params):
 	raw_image_path, output_image_path = params
 	if try_load_nifti(output_image_path) == False:
 		run_shell('N4BiasFieldCorrection -d 3 -i %s -o %s -c [50x50x50,0.0] -s 2' % \
@@ -71,7 +71,7 @@ def main():
 		type=int, default=0)
 
 	# advanced configs below. In most cases you won't need to set these.
-	parser.add_argument('--skip-preprocessing', help='[Advanced] Skip pre-processing.', action = 'store_true')
+	parser.add_argument('--skip-bfc', help='[Advanced] Skip bias field correction.', action = 'store_true')
 	parser.add_argument('--custom-task-name', 
 		help='[Advanced] Find model in specified task to segment image.', type = str, required = False)
 
@@ -82,7 +82,7 @@ def main():
 			(len(args.input_images), len(args.case_names)))
 	
 	# check integrity
-	ignore_ANTs = True if args.skip_preprocessing else False
+	ignore_ANTs = True if args.skip_bfc else False
 	if check_system_integrity(verbose=True,ignore_ANTs=ignore_ANTs,ignore_FreeSurfer=True,ignore_FSL=True) == False:
 		exit(1)
 
@@ -115,16 +115,16 @@ def main():
 	post_fov_folder = mkdir(join_path(args.output_folder, '002_Segmentations', '003_postproc_fov'))
 
 	# preprocessing
-	if not args.skip_preprocessing:
-		print('Pre-processing test images for prediction.')
+	print('Pre-processing test images for prediction.')
+	# bias field correction
+	if not args.skip_bfc:
 		n4_tasks = []
 		for case_name, input_image in zip(test_dataset['case'], test_dataset['flair']):
 			n4_image = join_path(image_folder, '%s_0000.nii.gz' % case_name)
 			n4_tasks.append( (input_image, n4_image) )
-		run_parallel(_parallel_do_preprocessing, n4_tasks, 4, 'preprocessing')
-		
+		run_parallel(_parallel_do_bias_field_correction, n4_tasks, 4, 'preprocessing')
 	else:
-		print('** Skipped image pre-processing. '
+		print('** Skipped bias field correction. '
 			'Segmentation performance can be suboptimal when images have strong intensity bias, please be aware.')
 		for case_name, input_image in zip(test_dataset['case'], test_dataset['flair']):
 			out_image = join_path(image_folder, '%s_0000.nii.gz' % case_name)
