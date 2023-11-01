@@ -16,7 +16,7 @@ hyperintensity segmentation without requiring manual annotations for training</i
 # Table of contents
 
 - [About DeepWMH](#about-deepwmh)
-- [Requirements](#requirements)
+- [Python Requirement](#python-requirement)
 - [Quick start: how to use our pretrained model (only for Linux-based systems)](#quick-start-how-to-use-our-pretrained-model-only-for-linux-based-systems)
 - [Advanced: how to train a model using data of my own? (only for Linux-based systems)](#advanced-how-to-train-a-model-using-data-of-my-own-only-for-linux-based-systems)
 
@@ -35,9 +35,9 @@ materials for more information.
 
 ![Method details.](https://github.com/lchdl/DeepWMH/blob/develop/images/method.png)
 
-## Requirements
+## Python Requirement
 
-Before installation, you may need to update your Python version if it is lower than "3.7.1".
+Before installation, you may need to update your Python version if it is lower than "<b>3.7.1</b>".
 Also, this tool is based on Python 3, Python 2 is deprecated and should no longer be used anymore.
 
 ## Quick start: how to use our pretrained model (only for Linux-based systems)
