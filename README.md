@@ -22,7 +22,7 @@ hyperintensity segmentation without requiring manual annotations for training</i
 
 ## About DeepWMH
 
-<i><b>If you have any questions or find any bugs in the code, please open an issue or create a pull request!</b></i>
++ <i><b>If you have any questions or find any bugs in the code, please open an issue or create a pull request!</b></i>
 
 DeepWMH is an annotation-free white matter hyperintensities (WMH) segmentation tool based on deep learning,
 designed for accurately segmenting WMH lesions using T2FLAIR images without labeled data. An overview of the 
