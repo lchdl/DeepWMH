@@ -87,7 +87,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     pip install -e .
     ```
 
-6.  Download and unzip ROBEX from "https://www.nitrc.org/projects/robex", then add:
+6.  Download and unzip ROBEX ([Robust Brain Extraction](https://ieeexplore.ieee.org/abstract/document/5742706)) from "https://www.nitrc.org/projects/robex", then add:
 
     ```bash
     export ROBEX_DIR="/path/to/your/unzipped/ROBEX/dir/"
