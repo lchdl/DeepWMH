@@ -107,7 +107,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     affected if the image is corrupted by strong intensity bias due to magnetic field inhomogeneity.
     For optimal performance I strongly recommend you to install ANTs.
 
-    > **Verify your install**: to see whether ANTs is installed correctly on your system, after the installation you need to type in
+    > **Verify your install**: to see whether ANTs is installed correctly in your system, after the installation you need to type in
     > ```
     > antsRegistration --version
     > ```
@@ -173,7 +173,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     DeepWMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
     ```
     
-    > if you don't have ANTs toolkit installed on your machine (see Step 7 for how to install ANTs), you 
+    > if you don't have ANTs toolkit installed in your machine (see Step 7 for how to install ANTs), you 
     > need to add "--skip-bfc" to the end of the command, such as:
     > <pre>DeepWMH_predict -i <...> -n <...> -m <...> -o <...> -g <...> <b>--skip-bfc</b></pre>
     > the segmentation performance can be seriously affected if the image is corrupted by strong intensity 
