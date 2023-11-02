@@ -101,9 +101,10 @@ To use our pre-trained model for inference, please carefully follow the steps be
 
     to update the change.
 
-7.  <b>(Optional)</b> compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs". This is mainly for intensity
-    correction. You can also skip this step if you don't want to install it. However, the segmentation performance
-    can be seriously affected if the image is corrupted by strong intensity bias due to magnetic field inhomogeneity.
+7.  <b>(Optional)</b> compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs", or download the
+    pre-compiled binaries [here](https://github.com/ANTsX/ANTs/releases/). This is mainly for intensity correction.
+    You can also skip this step if you don't want to install it. However, the segmentation performance can be seriously
+    affected if the image is corrupted by strong intensity bias due to magnetic field inhomogeneity.
     For optimal performance I strongly recommend you to install ANTs.
 
     > **Verify your install**: to see whether ANTs is installed correctly on your system, after the installation you need to type in
@@ -125,7 +126,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     > ```
     > if no error shows, then ANTs is successfully installed.
 
-8.  <b>(Optional)</b> verify your install:
+9.  <b>(Optional)</b> verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
@@ -144,7 +145,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
        errors are also given. You can follow the tips to fix those problems and repeat Step 8 to verify your
        install until no error occurs.
 
-9.  After installation, run
+10.  After installation, run
 
     ```bash
     DeepWMH_predict -h
@@ -153,7 +154,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     if no error occurs, then the installation is complete! Now you are ready to use our pretrained model for
     segmentation.
 
-10. Download our pre-trained model (~200 MB) from 
+11. Download our pre-trained model (~200 MB) from 
 
     1) "https://drive.google.com/drive/folders/1CDJkY5F95sW638UGjohWDqXvPtBTI1w3?usp=share_link" or
     2) "https://pan.baidu.com/s/1j7aESa4NEcu95gsHLR9BqQ?pwd=yr3o"
@@ -166,7 +167,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     
     to install model (as indicated by <tar_gz_file>) to a specific location (as indicated by <model_install_dir>).
 
-11. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
+12. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
 
     ```bash
     DeepWMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
