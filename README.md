@@ -43,7 +43,7 @@ Also, this tool is based on Python 3, Python 2 is deprecated and should no longe
 ## Quick start: how to use our pretrained model (only for Linux-based systems)
 
 The fastest way of applying our tool to your research is by <i><b>using our pre-trained model</i></b> directly.
-To use our pre-trained model for inference, please carefully follow the steps below:
+To use our pre-trained model for inference, please follow the steps below:
 
 1.  Update your Python environment. Then, create a new virtual environment using the following commands:
     ```bash
@@ -128,7 +128,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     > ```
     > if no error shows, then ANTs is successfully installed.
 
-9.  <b>(Optional)</b> verify your install:
+8.  <b>(Optional)</b> verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
@@ -147,7 +147,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
        errors are also given. You can follow the tips to fix those problems and repeat Step 8 to verify your
        install until no error occurs.
 
-10.  After installation, run
+9.  After installation, run
     
     ```bash
     DeepWMH_predict -h
@@ -156,7 +156,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     if no error occurs, then the installation is complete! Now you are ready to use our pretrained model for
     segmentation.
 
-11. Download our pre-trained model (~200 MB) from 
+10. Download our pre-trained model (~200 MB) from 
 
     1) "https://drive.google.com/drive/folders/1CDJkY5F95sW638UGjohWDqXvPtBTI1w3?usp=share_link" or
     2) "https://pan.baidu.com/s/1j7aESa4NEcu95gsHLR9BqQ?pwd=yr3o"
@@ -169,7 +169,7 @@ To use our pre-trained model for inference, please carefully follow the steps be
     
     to install model (as indicated by <tar_gz_file>) to a specific location (as indicated by <model_install_dir>).
 
-12. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
+11. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
 
     ```bash
     DeepWMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
