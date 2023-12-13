@@ -31,26 +31,13 @@ def hard_dice_binary(y_true: np.ndarray, y_pred: np.ndarray):
     y_pred = (y_pred>0.5).astype('float32')
     return 2 * np.sum(y_true*y_pred) / ( np.sum(y_true) + np.sum(y_pred) + 0.000001 )
 
-def voxel_confusion_matrix(y_true: np.ndarray, y_pred: np.ndarray):
-    yt_binary = (y_true > 0.5)
-    yp_binary = (y_pred > 0.5)
-    tp = (yt_binary == True) * (yp_binary == True)
-    tn = (yt_binary == False) * (yp_binary == False)
-    fp = (yt_binary == False) * (yp_binary == True)
-    fn = (yt_binary == True) * (yp_binary == False)
-    # calculate metrics
-    tpr = tp / (tp+fn) # recall
-    fnr = fn / (tp+fn)
-    ppv = tp / (tp+fp) # aka positive predictive value, precision
-    return tpr, fnr, ppv
-
 def voxel_precision_recall(y_true: np.ndarray, y_pred: np.ndarray):
     yt_binary = (y_true > 0.5)
     yp_binary = (y_pred > 0.5)
-    tp = (yt_binary == True) * (yp_binary == True)
-    tn = (yt_binary == False) * (yp_binary == False)
-    fp = (yt_binary == False) * (yp_binary == True)
-    fn = (yt_binary == True) * (yp_binary == False)
+    tp = np.sum((yt_binary == True) * (yp_binary == True))
+    tn = np.sum((yt_binary == False) * (yp_binary == False))
+    fp = np.sum((yt_binary == False) * (yp_binary == True))
+    fn = np.sum((yt_binary == True) * (yp_binary == False))
     # calculate metrics
     ppv = tp / (tp+fp) # precision
     tpr = tp / (tp+fn) # recall
