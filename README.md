@@ -5,8 +5,6 @@ Zaiqiang zhang, Yanling zhang, Rui Chen, Pinnan Yu, Peixin Zhang, Yulu Shi, Jian
 Fudong Shi, Yanli Wang, Jiwei Jiang, Aaron Carass, Yaou Liu, Chuyang Ye. "<i><b>DeepWMH: a deep learning tool for accurate white matter
 hyperintensity segmentation without requiring manual annotations for training</i></b>". Science Bulletin, 2023. (accepted)
 
-<i><b>The paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
-
 <p align="center">
   <img src="https://github.com/lchdl/DeepWMH/blob/develop/images/segmentation.png" width="350" />
   <img src="https://github.com/lchdl/DeepWMH/blob/develop/images/segmentation2.png" width="460" /> 
