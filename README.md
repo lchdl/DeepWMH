@@ -3,7 +3,7 @@
 Chenghao Liu, Zhizheng Zhuo, Liying Qu, Ying Jin, Tiantian Hua, Jun Xu, Guirong Tan, Yuna Li, Yunyun Duan, Tingting Wang,
 Zaiqiang zhang, Yanling zhang, Rui Chen, Pinnan Yu, Peixin Zhang, Yulu Shi, Jianguo Zhang, Decai Tian, Runzhi Li, Xinghu Zhang,
 Fudong Shi, Yanli Wang, Jiwei Jiang, Aaron Carass, Yaou Liu, Chuyang Ye. "<i><b>DeepWMH: a deep learning tool for accurate white matter
-hyperintensity segmentation without requiring manual annotations for training</i></b>". Science Bulletin, 2023.
+hyperintensity segmentation without requiring manual annotations for training</i></b>". Science Bulletin, 2023. (accepted)
 
 <i><b>The paper is currently under review. The complete code and pretrained model are now uploaded for the review process.</b></i>
 
