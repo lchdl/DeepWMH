@@ -28,7 +28,7 @@ def check_system_integrity(verbose=True,
             success = False
             ANTs_failed = True
             printv('[X] Cannot find "antsRegistration". Please compile & install ANTs from '
-                '"https://github.com/ANTsX/ANTs".', verbose=verbose)
+                '"https://github.com/ANTsX/ANTs" or download pre-compiled binaries from "https://github.com/ANTsX/ANTs/releases/".', verbose=verbose)
         if try_shell('antsGroupRegistration -h') != 0:
             success = False
             ANTs_failed = True
@@ -38,7 +38,7 @@ def check_system_integrity(verbose=True,
             success = False
             ANTs_failed = True
             printv('[X] Cannot find "N4BiasFieldCorrection". Please compile & install ANTs from '
-                '"https://github.com/ANTsX/ANTs".', verbose=verbose)
+                '"https://github.com/ANTsX/ANTs" or download pre-compiled binaries from "https://github.com/ANTsX/ANTs/releases/".', verbose=verbose)
         
         if ANTs_failed:
             printv('    ** After installation you need to append:        \n\n'
@@ -57,11 +57,11 @@ def check_system_integrity(verbose=True,
         if try_shell('nnUNet_train -h') != 0:
             success = False
             printv('[X] Cannot find "nnUNet_train". Please install nnU-Net from '
-                '"https://github.com/lchdl/nnUNet".', verbose=verbose)
+                '"https://github.com/lchdl/nnUNet_for_DeepWMH".', verbose=verbose)
         if try_shell('nnUNet_predict -h') != 0:
             success = False
             printv('[X] Cannot find "nnUNet_predict". Please install nnU-Net from '
-                '"https://github.com/lchdl/nnUNet".', verbose=verbose)
+                '"https://github.com/lchdl/nnUNet_for_DeepWMH".', verbose=verbose)
 
     # FreeSurfer
     if not ignore_FreeSurfer:
@@ -114,9 +114,6 @@ def check_system_integrity(verbose=True,
             if file_exist(ROBEX_SH) == False:
                 success = False
                 printv('[X] Cannot find "runROBEX.sh" in directory "%s".' % ROBEX_DIR, verbose=verbose)
-            elif file_exist(ROBEX_BIN) == False:
-                success = False
-                printv('[X] Cannot find "ROBEX" executable in directory "%s".' % ROBEX_DIR, verbose=verbose)
             else:
                 if try_shell(ROBEX_SH) != 0:
                     success = False
@@ -130,8 +127,8 @@ def check_system_integrity(verbose=True,
             import torch
         except ImportError:
             success = False
-            printv('[X] Cannot import PyTorch. Maybe you need to install nnU-Net from '
-                '"https://github.com/lchdl/nnUNet" before using this tool.', verbose = verbose)
+            printv('[X] Cannot import PyTorch. Maybe you need to install PyTorch from '
+                '"https://pytorch.org/" before using DeepWMH.', verbose = verbose)
         except BaseException as e:
             if isinstance(e, Exception):
                 # general exceptions
