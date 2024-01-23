@@ -5,6 +5,8 @@ Zaiqiang zhang, Yanling zhang, Rui Chen, Pinnan Yu, Peixin Zhang, Yulu Shi, Jian
 Fudong Shi, Yanli Wang, Jiwei Jiang, Aaron Carass, Yaou Liu, Chuyang Ye. "<i><b>DeepWMH: a deep learning tool for accurate white matter
 hyperintensity segmentation without requiring manual annotations for training</i></b>". Science Bulletin, 2023. (accepted)
 
+**Supplementary materials**: https://drive.google.com/file/d/13Kyk0v19kRnJ40JC22-p_YK2urnzZcvh/view?usp=sharing
+
 <p align="center">
   <img src="https://github.com/lchdl/DeepWMH/blob/develop/images/segmentation.png" width="350" />
   <img src="https://github.com/lchdl/DeepWMH/blob/develop/images/segmentation2.png" width="460" /> 
@@ -28,8 +30,8 @@ whole processing pipeline is shown below.
 
 ![DeepWMH lesion segmentation pipeline overview.](https://github.com/lchdl/DeepWMH/blob/develop/images/pipeline.png)
 
-The figure below shows a more detailed version of the processing pipeline. Please refer to the supplementary 
-materials for more information.
+The figure below shows a more detailed version of the processing pipeline. Please refer to the [supplementary materials](https://drive.google.com/file/d/13Kyk0v19kRnJ40JC22-p_YK2urnzZcvh/view?usp=sharing) 
+for more information.
 
 ![Method details.](https://github.com/lchdl/DeepWMH/blob/develop/images/method.png)
 
@@ -85,7 +87,11 @@ To use our pre-trained model for inference, please follow the steps below:
     pip install -e .
     ```
 
-6.  Download and unzip ROBEX ([Robust Brain Extraction](https://ieeexplore.ieee.org/abstract/document/5742706)) from "https://www.nitrc.org/projects/robex", then add:
+6.  Download and unzip ROBEX ([Robust Brain Extraction](https://ieeexplore.ieee.org/abstract/document/5742706)) from "https://www.nitrc.org/projects/robex",
+
+    ![Download ROBEX binary.](https://github.com/lchdl/DeepWMH/blob/develop/images/ROBEX_download.png)
+
+    then add:
 
     ```bash
     export ROBEX_DIR="/path/to/your/unzipped/ROBEX/dir/"
@@ -99,7 +105,7 @@ To use our pre-trained model for inference, please follow the steps below:
 
     to update the change.
 
-7.  <b>(Optional)</b> compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs", or download the
+8.  <b>(Optional)</b> compile & install ANTs toolkit from "https://github.com/ANTsX/ANTs", or download the
     pre-compiled binaries [here](https://github.com/ANTsX/ANTs/releases/). This is mainly for intensity correction.
     <b><i>You need to add ANTs binaries to "PATH" in your ~/.bashrc before using them</b></i>.
 
@@ -126,7 +132,7 @@ To use our pre-trained model for inference, please follow the steps below:
     > ```
     > if no error shows, then ANTs is successfully installed.
 
-8.  <b>(Optional)</b> verify your install:
+9.  <b>(Optional)</b> verify your install:
     1) activate your virtual environment
     2) enter Python by typing and running:
     
@@ -145,7 +151,7 @@ To use our pre-trained model for inference, please follow the steps below:
        errors are also given. You can follow the tips to fix those problems and repeat Step 8 to verify your
        install until no error occurs.
 
-9.  After installation, run
+10.  After installation, run
     
     ```bash
     DeepWMH_predict -h
@@ -154,7 +160,7 @@ To use our pre-trained model for inference, please follow the steps below:
     if no error occurs, then the installation is complete! Now you are ready to use our pretrained model for
     segmentation.
 
-10. Download our pre-trained model (~200 MB) from 
+11. Download our pre-trained model (~200 MB) from 
 
     1) "https://drive.google.com/drive/folders/1CDJkY5F95sW638UGjohWDqXvPtBTI1w3?usp=share_link" or
     2) "https://pan.baidu.com/s/1j7aESa4NEcu95gsHLR9BqQ?pwd=yr3o"
@@ -167,7 +173,7 @@ To use our pre-trained model for inference, please follow the steps below:
     
     to install model (as indicated by <tar_gz_file>) to a specific location (as indicated by <model_install_dir>).
 
-11. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
+12. Using pre-trained model to segment WMH lesions from FLAIR images with the following command:
 
     ```bash
     DeepWMH_predict -i <input_images> -n <subject_names> -m <model_install_dir> -o <output_folder> -g <gpu_id>
