@@ -7,7 +7,7 @@ This repository provides a Dockerized setup for running the **DeepWMH** tool ava
 ### 1. Clone the Repository
 ```bash
 git clone <repository_url>
-cd docker-deepwmh
+cd docker/
 ```
 
 ### 2. Build the Docker Image
