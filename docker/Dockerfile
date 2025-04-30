@@ -8,7 +8,7 @@ FROM python:3.9-slim
 
 # Combine system dependencies installation and cleanup
 RUN apt-get update && apt-get install -y \
-    wget unzip bc python3-pip \
+    wget unzip bc python3-pip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip, setuptools, and install wheel in a single command
