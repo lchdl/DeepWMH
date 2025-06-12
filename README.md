@@ -45,6 +45,12 @@ Also, this tool is based on Python 3, Python 2 is deprecated and should no longe
 The fastest way of applying our tool to your research is by <i><b>using our pre-trained model</i></b> directly.
 To use our pre-trained model for inference, please follow the steps below:
 
+### Dockerized Setup
+
+- If you have Docker installed, you can <i><b>run DeepWMH inside a Docker container</i></b> for a faster and easier setup. See **[this](https://github.com/lchdl/DeepWMH/blob/develop/docker/README.md)** for more details.
+
+### Non-Dockerized Setup
+
 1.  Update your Python environment. Then, create a new virtual environment using the following commands:
     ```bash
     pip install -U pip                         # update pip
